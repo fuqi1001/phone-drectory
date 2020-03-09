@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Nav from './container/nav/Nav';
 import List from './container/list/List';
 import Detail from './container/detail/Detail';
@@ -16,6 +16,7 @@ function App() {
 
   async function fetchUserList() {
     try {
+      // set up proxy in package.json file to deal with CORS problem.
       axios.defaults.headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
